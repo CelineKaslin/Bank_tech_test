@@ -16,4 +16,8 @@ describe Transaction do
     expect(transaction.debit_made).to eq (200)
   end
 
+  it "return the date of the transaction" do
+    expect(transaction.date).to eq(Date.today.strftime)
+
+  end
 end

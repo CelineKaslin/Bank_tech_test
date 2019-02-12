@@ -13,12 +13,12 @@ describe BankStatement do
     end
   end
 
-  describe '#print_statement' do
-    it "prints the statement with all the transaction of the account" do
-      expect(bankstatement.print_statement).to eq("0 || 1000 || 0 \n" "1000 || 0 || 200")
-
-    end
-  end
+  # describe '#print_statement' do
+  #   it "prints the statement with all the transaction of the account" do
+  #     expect(bankstatement.print_statement).to eq("0 || 1000 || 0 \n" "1000 || 0 || 200")
+  #
+  #   end
+  # end
 
 
 
