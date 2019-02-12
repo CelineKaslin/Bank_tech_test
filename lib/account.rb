@@ -21,11 +21,11 @@ class Account
   private
 
   def credit(amount)
-    Transaction.new(@balance, amount, "credit")
+    Transaction.new(@balance, amount, 0)
   end
 
   def debit(amout)
-    Transaction.new(@balance, amount, "debit")
+    Transaction.new(@balance, 0, amount)
   end
 
 end
