@@ -8,4 +8,7 @@ class Account
     @balance = BALANCE
   end
 
+  def deposit(amount)
+    @balance += amount
+  end
 end
