@@ -7,9 +7,9 @@ class BankStatement
   end
 
   def print_statement
-    puts "balance || credit || debit "
-    @all_transactions.each do |transaction|
-      puts "#{transaction.balance} || #{transaction.credit_made} || #{transaction.debit_made}"
+    puts "date || credit || debit || balance"
+    @all_transactions.all.reverse.each do |transaction|
+      puts "#{transaction.date} || #{transaction.credit_made} || #{transaction.debit_made} || #{transaction.balance}"
     end
   end
 
