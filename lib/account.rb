@@ -1,3 +1,5 @@
+require_relative 'transaction'
+
 class Account
 
   attr_reader :balance
@@ -14,6 +16,16 @@ class Account
 
   def withdraw(amount)
     @balance -= amount
+  end
+
+  private
+
+  def credit(amount)
+    Transaction.new(@balance, amount, "credit")
+  end
+
+  def debit(amout)
+    Transaction.new(@balance, amount, "debit")
   end
 
 end

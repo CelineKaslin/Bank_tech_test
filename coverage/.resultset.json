@@ -46,6 +46,8 @@
         1,
         null,
         1,
+        null,
+        1,
         4,
         null,
         null,
@@ -57,25 +59,14 @@
         2,
         null,
         null,
-        null
-      ],
-      "/Users/celinekaslin/Desktop/MakersProject/week9/Bank_tech_test/spec/transaction_spec.rb": [
         1,
         null,
         1,
-        null,
-        3,
-        null,
-        1,
-        1,
-        null,
-        null,
-        null,
-        null,
+        0,
         null,
         null,
         1,
-        1,
+        0,
         null,
         null,
         null
@@ -92,8 +83,25 @@
         null,
         null,
         null
+      ],
+      "/Users/celinekaslin/Desktop/MakersProject/week9/Bank_tech_test/spec/transaction_spec.rb": [
+        1,
+        null,
+        1,
+        null,
+        3,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
       ]
     },
-    "timestamp": 1549932197
+    "timestamp": 1549932701
   }
 }
