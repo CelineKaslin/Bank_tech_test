@@ -12,10 +12,12 @@ class Account
 
   def deposit(amount)
     @balance += amount
+    credit(amount)
   end
 
   def withdraw(amount)
     @balance -= amount
+    debit(amount)
   end
 
   private
@@ -24,7 +26,7 @@ class Account
     Transaction.new(@balance, amount, 0)
   end
 
-  def debit(amout)
+  def debit(amount)
     Transaction.new(@balance, 0, amount)
   end
 

@@ -12,18 +12,18 @@ describe Account do
 
   describe '#deposit' do
     it "increase the balance of the account" do
-      expect(account.deposit(1000)).to eq(1000)
+      expect{account.deposit(1000)}.to change{account.balance}.from(0).to(1000)
     end
   end
 
   describe '#withdraw' do
     it "decrease the balance of the account" do
       account.deposit(1000)
-      expect(account.withdraw(200)).to eq (800)
+      expect{account.withdraw(200)}.to change{account.balance}.from(1000).to(800)
     end
 
     it "decrease the balance to a negative number if more deduction than balance available" do
-      expect(account.withdraw(500)).to eq(-500)
+      expect{account.withdraw(500)}.to change {account.balance}.from(0).to(-500)
     end
   end
 
@@ -31,5 +31,5 @@ describe Account do
 
 
 
-  
+
 end
