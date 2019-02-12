@@ -16,7 +16,7 @@ describe BankStatement do
 
   describe '#print_statement' do
     it "prints the statement with all the transaction of the account" do
-      expect{bankstatement.print_statement}.to output("date || credit || debit || balance \n 10-01-2012 || 1000 || 0 || 1000 \n 13-01-2012 || 2000 || 0 || 3000 \n 14-01-2012 || 0 || 500 || 2500").to_stdout
+      expect{bankstatement.print_statement}.to output("date || credit || debit || balance \n 14-01-2012 || 0 || 500 || 2500 \n 13-01-2012 || 2000 || 0 || 3000 \n 10-01-2012 || 1000 || 0 || 1000").to_stdout
 
     end
   end
