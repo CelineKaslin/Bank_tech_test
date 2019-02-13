@@ -1,5 +1,5 @@
 # for visibility to debug and to interact with program
-#type irb in cmd line from root directory then type :
+# type irb in cmd line from root directory then type :
 # require_relative './lib/account.rb'
 # require_relative './lib/accountflow.rb'
 # require_relative './lib/transaction.rb'

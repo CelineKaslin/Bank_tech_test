@@ -1,5 +1,4 @@
 class AccountFlow
-
   attr_reader :flow
 
   def initialize
@@ -9,5 +8,4 @@ class AccountFlow
   def add_flow(transaction)
     @flow << transaction
   end
-
 end

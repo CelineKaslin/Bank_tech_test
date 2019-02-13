@@ -1,7 +1,6 @@
-require'date'
+require 'date'
 
 class Transaction
-
   attr_reader :balance, :credit_made, :debit_made, :date
 
   def initialize(balance, credit_made, debit_made)
@@ -10,5 +9,4 @@ class Transaction
     @debit_made = debit_made
     @date = Date.today.strftime
   end
-
 end

@@ -1,7 +1,6 @@
 require_relative 'transaction'
 
 class Account
-
   attr_reader :balance
 
   BALANCE = 0
@@ -29,5 +28,4 @@ class Account
   def debit(amount)
     Transaction.new(@balance, 0, amount)
   end
-
 end
