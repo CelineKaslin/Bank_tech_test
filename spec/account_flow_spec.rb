@@ -2,8 +2,8 @@ require 'accountflow'
 
 describe AccountFlow do
   subject(:account_flow) { described_class.new }
-  let(:transaction_1) { double balance: 0, credit_made: 1000, debit_made: 0 }
-  let(:transaction_2) { double balance: 1000, credit_made: 0, debit_made: 200 }
+  let(:transaction_1) { double balance: 1000, credit_made: 1000, debit_made: 0, date: '12/02/2019' }
+  let(:transaction_2) { double balance: 800, credit_made: 0, debit_made: 200, date: '13/02/2019' }
 
   it 'should have no flow by default' do
     expect(account_flow.flow).to be_empty()
