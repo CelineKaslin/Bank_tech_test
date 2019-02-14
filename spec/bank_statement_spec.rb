@@ -14,16 +14,9 @@ describe BankStatement do
     end
   end
 
-  describe '#header' do
-    it "should display the header of the bank statement" do
-      expect { bankstatement.header }.to output("date || credit || debit || balance\n").to_stdout
-    end
-  end
-
   describe '#print_statement' do
     it "prints the statement with all the transaction of the account" do
-      expect { bankstatement.print_statement }.to output("date || credit || debit || balance\n14-01-2012 || 0 || 500 || 2500\n13-01-2012 || 2000 || 0 || 3000\n10-01-2012 || 1000 || 0 || 1000\n").to_stdout
-
+      expect { bankstatement.print_statement }.to output("date || credit || debit || balance\n14-01-2012 || 0 ||500 || 2500\n13-01-2012 || 2000 ||0 || 3000\n10-01-2012 || 1000 ||0 || 1000\n").to_stdout
     end
   end
 end

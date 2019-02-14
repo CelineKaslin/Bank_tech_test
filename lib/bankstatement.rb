@@ -5,10 +5,6 @@ class BankStatement
     @all_transactions = accountflow
   end
 
-  def header
-    puts "date || credit || debit || balance\n"
-  end
-
   def print_statement
     header
     @all_transactions.flow.reverse_each do |transaction|
@@ -16,4 +12,11 @@ class BankStatement
 #{transaction.debit_made} || #{transaction.balance}\n"
     end
   end
+
+  private
+
+  def header
+    puts "date || credit || debit || balance\n"
+  end
+
 end
