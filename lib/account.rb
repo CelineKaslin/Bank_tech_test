@@ -14,10 +14,10 @@ class Account
     @date = date
   end
 
-  def deposit(deposit_amount)
-    @balance += deposit_amount
+  def deposit(credit_amount)
+    @balance += credit_amount
     debit_made = 0
-    new_transaction(deposit_amount, debit_made)
+    new_transaction(credit_amount, debit_made)
   end
 
   def withdraw(debit_amount)

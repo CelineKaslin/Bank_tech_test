@@ -44,14 +44,14 @@ I want to see my total balance
 
 ## Approach ##
 
-![bank_techtest](https://user-images.githubusercontent.com/43742795/52711104-df4e0200-2f88-11e9-9b32-6f7d8326d916.png)
+![bank_techtest](https://user-images.githubusercontent.com/43742795/52817759-bae34a00-309c-11e9-9293-22486a0a1f06.png)
 
 ### Tech stack ###
 
 * Ruby
 * Rspec
 
-![rspec_coverage_bank_test](https://user-images.githubusercontent.com/43742795/52719555-c3089000-2f9d-11e9-8213-61cb50536429.png)
+![rspec_coverage_bank_test](https://user-images.githubusercontent.com/43742795/52815803-88831e00-3097-11e9-90de-47833c32007a.png)
 
 
 ### Code quality ###
@@ -145,15 +145,10 @@ $ rubocop
 2.5.1 :001 >  require './lib/transaction.rb'
 2.5.1 :001 >  require './lib/bankstatement.rb'
 2.5.1 :001 >  account = Account.new
-2.5.1 :001 >  account_flow = AccountFlow.new
-2.5.1 :001 >  bank_statement = BankStatement.new(account_flow)
-2.5.1 :001 >  transaction_1 = account.deposit(1000)
-2.5.1 :001 >  account_flow.add_flow(transaction_1)
-2.5.1 :001 >  transaction_2 = account.deposit(2000)
-2.5.1 :001 >  account_flow.add_flow(transaction_2)
-2.5.1 :001 >  transaction_3 = account.withdraw(500)
-2.5.1 :001 >  account_flow.add_flow(transaction_3)
-2.5.1 :001 >  bank_statement.print_statement
+2.5.1 :001 >  account.deposit(1000)
+2.5.1 :001 >  account.deposit(2000)
+2.5.1 :001 >  account.withdraw(500)
+2.5.1 :001 >  account.display_statement
 ```
 
 This will display: (the date will change depending on when you did it)
@@ -164,3 +159,5 @@ date || credit || debit || balance
 2019-02-13 || 2000 || 0 || 3000
 2019-02-13 || 1000 || 0 || 1000
 ```
+
+![irb_interaction_banktest](https://user-images.githubusercontent.com/43742795/52815923-dbf56c00-3097-11e9-8262-b5912c260b13.png)
