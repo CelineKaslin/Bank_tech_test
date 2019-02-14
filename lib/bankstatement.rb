@@ -17,12 +17,12 @@ class BankStatement
   end
 
   def statement
-    record =''
+    records =''
     @all_transactions.flow.reverse_each do |transaction|
-      record = "#{transaction.date} || #{transaction.credit_made} ||\
+      records = "#{transaction.date} || #{transaction.credit_made} ||\
 #{transaction.debit_made} || #{transaction.balance}\n"
-      puts record
+      puts records
     end
   end
-  
+
 end

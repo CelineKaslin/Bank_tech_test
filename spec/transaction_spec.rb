@@ -1,22 +1,24 @@
 require 'transaction'
 
 describe Transaction do
-  subject(:transaction) { described_class.new(0, 1000, 200) }
+  subject(:transaction1) { described_class.new(1000, 1000, 0, '12/02/1019') }
+  subject(:transaction2) { described_class.new(800, 0, 200, '13/02/1019') }
 
-  it 'return the balance of the account' do
-    expect(transaction.balance).to eq 0
-  end
+  describe '#attribute of Transaction' do
+    it 'return the balance of the account after a transaction' do
+      expect(transaction1.balance).to eq 1000
+    end
 
-  it 'return the amount of the credit made' do
-    expect(transaction.credit_made).to eq 1000
-  end
+    it 'return the amount of the credit made' do
+      expect(transaction1.credit_made).to eq 1000
+    end
 
-  it 'return the amount of the debit made' do
-    expect(transaction.debit_made).to eq 200
-  end
+    it 'return the amount of the debit made' do
+      expect(transaction2.debit_made).to eq 200
+    end
 
-  it 'return the date of the transaction' do
-    expect(transaction.date).to eq(Date.today.strftime)
-
+    it 'return the date of the transaction' do
+      expect(transaction1.date).to eq('12/02/1019')
+    end
   end
 end

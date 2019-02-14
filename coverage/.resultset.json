@@ -79,6 +79,7 @@
         null,
         1,
         4,
+        4,
         null,
         null,
         1,
@@ -167,14 +168,17 @@
         3,
         null,
         null,
+        null,
         null
       ],
       "/Users/celinekaslin/Desktop/MakersProject/week9/Bank_tech_test/spec/transaction_spec.rb": [
         1,
         null,
         1,
-        5,
+        4,
+        2,
         null,
+        1,
         1,
         1,
         null,
@@ -194,6 +198,6 @@
         null
       ]
     },
-    "timestamp": 1550162169
+    "timestamp": 1550166766
   }
 }
