@@ -5,10 +5,12 @@ class Account
 
   BALANCE = 0
 
-  def initialize(accountflow = AccountFlow.new, transaction = Transaction, bankstatement = BankStatement.new, date = Date.today.strftime)
+  def initialize(accountflow = AccountFlow.new, transaction = Transaction,
+    bankstatement = BankStatement.new, date = Date.today.strftime)
     @balance = BALANCE
     @accountflow = accountflow
     @transaction = transaction
+    @bankstatement = bankstatement
     @date = date
   end
 

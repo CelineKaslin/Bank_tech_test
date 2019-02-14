@@ -4,9 +4,9 @@ describe Account do
 
   subject(:account) { described_class.new }
   let(:accountflow) { double flow: [transaction_1, transaction_2] }
-  let(:transaction_1) { double balance: 1000, credit_made: 1000, debit_made: 0, date: '12/02/2019'}
+  let(:transaction_1) { double balance: 1000, credit_made: 1000, debit_made: 0, date: '12/02/2019' }
   let(:transaction_2) { double balance: 800, credit_made: 0, debit_made: 200, date: '13/02/2019' }
-  let(:bankstatement) { double print_statement: accountflow}
+  let(:bankstatement) { double print_statement: accountflow }
 
   describe '#balance' do
     it 'has a default balance of 0' do
