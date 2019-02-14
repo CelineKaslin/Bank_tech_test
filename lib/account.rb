@@ -17,14 +17,10 @@ class Account
     new_transaction = @transaction.new(@balance, deposit_amount, debit_made, @date)
   end
 
-  def withdraw(amount)
-    @balance -= amount
-    debit(amount)
+  def withdraw(debit_amount)
+    @balance -= debit_amount
+    credit_made = 0
+    new_transaction = @transaction.new(@balance, credit_made, debit_amount, @date)
   end
 
-  private
-
-  def debit(amount)
-    Transaction.new(@balance, 0, amount, @date)
-  end
 end
