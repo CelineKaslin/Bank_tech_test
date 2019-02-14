@@ -1,13 +1,8 @@
 class BankStatement
-  attr_reader :all_transactions
 
-  def initialize(accountflow)
-    @all_transactions = accountflow
-  end
-
-  def print_statement
+  def print_statement(all_flow)
     header
-    statement
+    statement(all_flow)
   end
 
   private
@@ -16,9 +11,9 @@ class BankStatement
     puts "date || credit || debit || balance\n"
   end
 
-  def statement
+  def statement(all_flow)
     records =''
-    @all_transactions.flow.reverse_each do |transaction|
+    all_flow.reverse_each do |transaction|
       records = "#{transaction.date} || #{transaction.credit_made} ||\
 #{transaction.debit_made} || #{transaction.balance}\n"
       puts records
