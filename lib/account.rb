@@ -14,13 +14,19 @@ class Account
   def deposit(deposit_amount)
     @balance += deposit_amount
     debit_made = 0
-    new_transaction = @transaction.new(@balance, deposit_amount, debit_made, @date)
+    new_transaction(deposit_amount, debit_made)
   end
 
   def withdraw(debit_amount)
     @balance -= debit_amount
     credit_made = 0
-    new_transaction = @transaction.new(@balance, credit_made, debit_amount, @date)
+    new_transaction(credit_made, debit_amount)
+  end
+
+  private
+
+  def new_transaction(credit_made, debit_made)
+    new_record = @transaction.new(@balance, credit_made, debit_made, @date)
   end
 
 end
