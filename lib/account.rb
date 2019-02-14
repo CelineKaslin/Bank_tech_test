@@ -5,14 +5,16 @@ class Account
 
   BALANCE = 0
 
-  def initialize(date = Date.today.strftime)
+  def initialize(transaction = Transaction, date = Date.today.strftime)
     @balance = BALANCE
+    @transaction = transaction
     @date = date
   end
 
-  def deposit(amount)
-    @balance += amount
-    credit(amount)
+  def deposit(deposit_amount)
+    @balance += deposit_amount
+    debit_made = 0
+    new_transaction = @transaction.new(@balance, deposit_amount, debit_made, @date)
   end
 
   def withdraw(amount)
@@ -21,10 +23,6 @@ class Account
   end
 
   private
-
-  def credit(amount)
-    Transaction.new(@balance, amount, 0, @date)
-  end
 
   def debit(amount)
     Transaction.new(@balance, 0, amount, @date)
