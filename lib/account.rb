@@ -5,8 +5,9 @@ class Account
 
   BALANCE = 0
 
-  def initialize(transaction = Transaction, date = Date.today.strftime)
+  def initialize(accountflow = AccountFlow.new, transaction = Transaction, date = Date.today.strftime)
     @balance = BALANCE
+    @accountflow = accountflow
     @transaction = transaction
     @date = date
   end
@@ -27,6 +28,7 @@ class Account
 
   def new_transaction(credit_made, debit_made)
     new_record = @transaction.new(@balance, credit_made, debit_made, @date)
+    @accountflow.add_flow(new_record)
   end
 
 end
